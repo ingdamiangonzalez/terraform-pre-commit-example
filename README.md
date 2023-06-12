@@ -24,3 +24,11 @@ pre-commit init-templatedir -t pre-commit ${DIR}
 check https://github.com/antonbabenko/pre-commit-terraform#available-hooks
 
 4- Make a new commit and all your hooks will be executed!
+
+The example has terraform_fmt, terraform_tflint and check-merge-conflict hooks. As you can see the file .tflint.hcl has a aws plugin. This plugin help you to validate some AWS rules like AWS instance types. 
+
+In the following picture you can see an invalid instance type error
+
+![title](images/AWSPlugin.png)
+
+To test it uncomment the aws_instance resource in main.tf and try to commit the change.
