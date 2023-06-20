@@ -2,7 +2,7 @@ name: Checkov
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
 
